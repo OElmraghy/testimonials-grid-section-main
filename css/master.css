@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+  background-color: hsl(210, 46%, 95%);
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+section {
+  padding: 2rem;
+  box-shadow: black 5px 10px 10px -15px;
+  border-radius: 0.6rem;
+  -webkit-border-radius: 0.6rem;
+  -moz-border-radius: 0.6rem;
+  -ms-border-radius: 0.6rem;
+  -o-border-radius: 0.6rem;
+}
+
+section .profile {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+section .profile img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+section .profile .name {
+  color: hsl(0, 0%, 100%);
+  font-size: 1em;
+}
+
+section .profile .title {
+  color: hsla(0, 0%, 100%, 50%);
+}
+
+section .opinion {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.5em;
+  margin: 1rem 0;
+  font-weight: bold;
+}
+
+section .qoute {
+  color: hsla(0, 0%, 100%, 70%);
+  line-height: 1.5;
+}
+
+.daniel {
+  background-color: hsl(263, 55%, 52%);
+  background-image: url(../images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: 80% 0;
+}
+
+@media (min-width: 768px) {
+  .daniel {
+    grid-column: span 2;
+  }
+}
+
+.daniel .profile img {
+  outline: 2px solid hsl(257.03deg 42.42% 65.54%);
+}
+
+.daniel .opinion {
+  position: relative;
+  z-index: 2;
+}
+
+.jonathan {
+  background-color: hsl(217, 19%, 35%);
+}
+
+.kira {
+  grid-row: span 2;
+}
+
+.dark-txt {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.dark-txt .opinion,
+.dark-txt .profile .name {
+  color: hsl(217, 19%, 35%);
+}
+
+.dark-txt .profile .title {
+  color: hsla(217, 19%, 35%, 50%);
+}
+
+.dark-txt .qoute {
+  color: hsla(217, 19%, 35%, 70%);
+}
+
+@media (max-width: 1024px) {
+  .jeanette {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 767px) {
+  .jeanette {
+    grid-column: unset;
+  }
+}
+
+.patrick {
+  background-color: hsl(219, 29%, 14%);
+  grid-column: span 2;
+}
+
+@media (max-width: 767px) {
+  .patrick {
+    grid-column: unset;
+  }
+}
+
+.patrick .profile img {
+  outline: 2px solid hsl(263, 55%, 52%);
+}
